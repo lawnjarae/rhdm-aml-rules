@@ -4,11 +4,13 @@ package com.redhat.demo.aml_rules;
 // with an aggregate transaction value greater than or equal to $50,000 USD
 rule "40 transactions greater than 50,000"
 when
-    accumulate($transaction: Transaction($amount: amount);
+    accumulate($transaction: Transaction($custId: custId, $amount: amount);
                $count: count($transaction),
                $sum: sum($amount);
                $count > 5, $sum > 50000)
 then
-    System.out.println("Rule matched! " + drools.getRule().getName() + " - There were " +
-                       $count + " transactions totaling $" + $sum + " dollars.");
+    System.out.println("Rule matched! " + drools.getRule().getName() + 
+                       " - Customer ID: " + $custId +
+                       " - There were " + $count + " transactions totaling $" 
+                       + $sum + " dollars.");
 end
