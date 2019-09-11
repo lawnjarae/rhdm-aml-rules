@@ -1,2 +1,5 @@
 package com.redhat.demo.aml_rules;
 
+// Any customer who sends at least forty transactions in a rolling 100-day period
+// with an aggregate transaction value greater than or equal to $50,000 USD
+rule ""
