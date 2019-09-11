@@ -9,5 +9,6 @@ when
                $sum: sum($amount);
                $count > 40, $sum > 50000)
 then
-    System.out.println("Rule matched! " + drools.getRule().getName());
+    System.out.println("Rule matched! " + drools.getRule().getName() + "\nThere were "
+                       $count + " transactions totaling $" + $sum + " dollars.");
 end
