@@ -7,7 +7,7 @@ when
     accumulate($transaction: Transaction($amount: amount);
                $count: count($transaction),
                $sum: sum($amount);
-               $count > 40, $sum > 50000)
+               $count > 5, $sum > 50000)
 then
     System.out.println("Rule matched! " + drools.getRule().getName() + "\nThere were " +
                        $count + " transactions totaling $" + $sum + " dollars.");
