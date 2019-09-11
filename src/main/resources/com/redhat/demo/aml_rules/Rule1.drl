@@ -2,12 +2,12 @@ package com.redhat.demo.aml_rules;
 
 // Any customer who sends at least forty transactions in a rolling 100-day period
 // with an aggregate transaction value greater than or equal to $50,000 USD
-rule "40 transactions greater than 50,000"
+rule "10 transactions greater than 50,000"
 when
     accumulate($transaction: Transaction($custId: custId, $amount: amount);
                $count: count($transaction),
                $sum: sum($amount);
-               $count > 5, $sum > 50000)
+               $count > 10, $sum > 50000)
 then
     System.out.println("Rule matched! " + drools.getRule().getName() + 
                        " - There were " + $count + " transactions totaling $" 
