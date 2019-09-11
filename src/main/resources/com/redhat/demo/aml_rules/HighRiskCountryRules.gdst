@@ -49,7 +49,7 @@
           <fieldValues>
             <org.drools.workbench.models.datamodel.rule.ActionFieldValue>
               <field>country</field>
-              <value>transaction.custId</value>
+              <value>transaction.customerCountry</value>
               <nature>3</nature>
               <type>String</type>
             </org.drools.workbench.models.datamodel.rule.ActionFieldValue>
@@ -61,7 +61,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>152</width>
+          <width>100</width>
           <header>Add High Risk Fact</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
