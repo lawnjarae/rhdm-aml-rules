@@ -43,7 +43,7 @@ public class Transaction {
 
 	@Override
 	public String toString() {
-		return "TransactionEntity{" + "id=" + id + ", custId=" + custId
+		return "Transaction{" + "custId=" + custId
 				+ ", amount=" + amount + ", customerCountry='"
 				+ customerCountry + '\'' + ", customerIndustry='"
 				+ customerIndustry + '\'' + '}';
