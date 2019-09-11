@@ -6,12 +6,23 @@ package com.redhat.demo.aml_rules;
 
 public class RuleResult implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public RuleResult() {
-    }
+	private java.lang.String message;
 
+	public RuleResult() {
+	}
 
+	public java.lang.String getMessage() {
+		return this.message;
+	}
 
+	public void setMessage(java.lang.String message) {
+		this.message = message;
+	}
+
+	public RuleResult(java.lang.String message) {
+		this.message = message;
+	}
 
 }
