@@ -6,12 +6,23 @@ package com.redhat.demo.aml_rules;
 
 public class CustomerInIndustryList implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public CustomerInIndustryList() {
-    }
+	private java.lang.String industry;
 
+	public CustomerInIndustryList() {
+	}
 
+	public java.lang.String getIndustry() {
+		return this.industry;
+	}
 
+	public void setIndustry(java.lang.String industry) {
+		this.industry = industry;
+	}
+
+	public CustomerInIndustryList(java.lang.String industry) {
+		this.industry = industry;
+	}
 
 }
