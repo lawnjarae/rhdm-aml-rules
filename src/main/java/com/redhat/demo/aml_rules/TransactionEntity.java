@@ -1,4 +1,4 @@
-package com.redhat.demo.aml;
+package com.redhat.demo.aml_rules;
 
 public class TransactionEntity {
     private Long custId;
