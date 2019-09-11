@@ -6,12 +6,23 @@ package com.redhat.demo.aml_rules;
 
 public class CustomerInHighRiskCountry implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public CustomerInHighRiskCountry() {
-    }
+	private java.lang.String country;
 
+	public CustomerInHighRiskCountry() {
+	}
 
+	public java.lang.String getCountry() {
+		return this.country;
+	}
 
+	public void setCountry(java.lang.String country) {
+		this.country = country;
+	}
+
+	public CustomerInHighRiskCountry(java.lang.String country) {
+		this.country = country;
+	}
 
 }
