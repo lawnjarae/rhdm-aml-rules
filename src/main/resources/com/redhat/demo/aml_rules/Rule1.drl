@@ -4,7 +4,7 @@ package com.redhat.demo.aml_rules;
 // with an aggregate transaction value greater than or equal to $50,000 USD
 rule "10 transactions greater than 50,000"
 when
-    accumulate($transaction: Transaction($custId: custId, $amount: amount);
+    accumulate($transaction: Transaction($amount: amount);
                $count: count($transaction),
                $sum: sum($amount);
                $count > 10, $sum > 50000)
