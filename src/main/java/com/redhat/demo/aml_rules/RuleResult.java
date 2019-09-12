@@ -25,4 +25,8 @@ public class RuleResult implements java.io.Serializable {
 		this.message = message;
 	}
 
+    @Override
+    public String toString() {
+        return "RuleResult{message='" + message + "'}";
+    }
 }
