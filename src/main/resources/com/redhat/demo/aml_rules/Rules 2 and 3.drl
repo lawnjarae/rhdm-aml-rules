@@ -7,7 +7,22 @@ when
     accumulate($transaction: Transaction($custId: custId, $amount: amount);
                $count: count($transaction),
                $sum: sum($amount);
-               $count > 4, $sum >= 75000)
+               $count >= 4, $sum >= 75000)
+then
+    RuleResult rr = new RuleResult();
+    rr.setMessage(drools.getRule().getName() + 
+                  " - There were " + $count + " transactions totaling $" +
+                  $sum + " dollars.");
+    insert(rr);
+end
+
+rule "In industry list; 5 Transactions >= 5000"
+when
+    CustomerInIndustryList()
+    accumulate($transaction: Transaction($custId: custId, $amount: amount);
+               $count: count($transaction),
+               $sum: sum($amount);
+               $count >= 5, $sum >= 5000)
 then
     RuleResult rr = new RuleResult();
     rr.setMessage(drools.getRule().getName() + 
