@@ -1,2 +1,12 @@
 package com.redhat.demo.aml_rules;
 
+rule "Not in industry; high risk country; 4 transactions >= 75000"
+when
+    not CustomerInIndustryList()
+    CustomerInHighRiskCountry()
+    accumulate($transaction: Transaction($custId: custId, $amount: amount);
+               $count: count($transaction),
+               $sum: sum($amount);
+               $count > 4, $sum >= 75000)
+then
+end
