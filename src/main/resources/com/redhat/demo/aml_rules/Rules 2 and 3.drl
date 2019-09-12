@@ -9,4 +9,9 @@ when
                $sum: sum($amount);
                $count > 4, $sum >= 75000)
 then
+    RuleResult rr = new RuleResult();
+    rr.setMessage(drools.getRule().getName() + 
+                  " - There were " + $count + " transactions totaling $" +
+                  $sum + " dollars.");
+    insert(rr);
 end
